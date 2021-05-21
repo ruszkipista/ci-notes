@@ -3,4 +3,5 @@
 - [JavaScript and the Document Object Model](https://ruszkipista.github.io/ci-notes/JavaScript-and-the-DOM.html)
 - [JavaScript Challenges](https://ruszkipista.github.io/ci-notes/JavaScript-Challenges.html)
 - [Python](https://ruszkipista.github.io/ci-notes/Python-CodeInstitute.html)
+- [Python Flask-SQLite-MongoDB](https://ruszkipista.github.io/ci-notes/Python-Flask-SQLite-MongoDB.html)
 - [Python Challenges](https://ruszkipista.github.io/ci-notes/Python-challenges.html)
