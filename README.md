@@ -10,5 +10,6 @@
 - [JavaScript Challenges](https://ruszkipista.github.io/ci-notes/notes/JavaScript-Challenges.html)
 - [Python](https://ruszkipista.github.io/ci-notes/notes/Python-CodeInstitute.html)
 - [Python Introduction to Object Oriented Programming](https://ruszkipista.github.io/ci-notes/notes/Python-Introduction-to-OOP.html)
+- [SQL Basics](https://ruszkipista.github.io/ci-notes/notes/SQLbasics.html)
 - [Python Flask-SQLite-MongoDB](https://ruszkipista.github.io/ci-notes/notes/Python-Flask-SQLite-MongoDB.html)
 - [Python Challenges](https://ruszkipista.github.io/ci-notes/notes/Python-challenges.html)
