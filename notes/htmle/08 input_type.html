@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Text Input Example</title>
+<script>
+    function validate() {
+      var address = document.getElementById("eml").value;
+      var pattern=/^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+      if( ! pattern.test(address)) {
+        alert("Invalid Email Address");
+        return false;
+      } 
+    }
+    function init() {
+      document.getElementById("form-1").onsubmit=validate;
+    }
+    onload=init;    
+</script>
+</head>
+
+<body>
+<!-- Downtown Houston, ZIP 77010 -->
+<form id="form-1" method="POST" action="http://localhost/echo.pl">
+
+  <datalist id="browsers">
+    <option value="Chrome">
+    <option value="Firefox">
+    <option value="Internet Explorer">
+    <option value="Opera">
+    <option value="Safari">
+    <option value="Microsoft Edge">
+  </datalist>
+
+<p><label>User Name :<input type="text"     name="Name"></label></p>
+<p><label>Password : <input type="password" name="Password"></label></p>
+<p><label>City :     <input type="text"     name="City"  value="Dallas"   required></label></p>
+<p><label>Area :     <input type="text"     name="Area"  value="Downtown" disabled></label></p>
+<p><label>State :    <input type="text"     name="State" value="Texas"    readonly></label></p>
+<p><label>Zip Code : <input type="text"     name="Zip Code" size="5" maxlength="5" ></label></p>
+<p><label>Color:     <input type="color"    name="color"></label></p> 
+<p><label>Range:     <input type="range"    name="range" min="1" max="10"></label></p> 
+<p><label>Counter    <input type="number"   name="count" min="0" max="8" size="1"></label></p> 
+<p><label>Time:      <input type="time"     name="time"></label></p> 
+<p><label>URL :      <input type="url"      name="url" size="54"></label></p> 
+<p><label>Email:     <input type="email" id="eml" name="email" size="45"></label></p> 
+<p><label>What is your favorite browser:
+  <input type="text" list="browsers" name="browser" />
+</label></p>
+
+<input type="submit" name="Button" value="Submit"> 
+</form>
+
+</body>
+</html>

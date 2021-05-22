@@ -1,0 +1,10 @@
+h1 {
+	text-align: right;
+	color : red ;
+	background : yellow ;
+	border : 10px dashed blue ;
+	margin-left : auto; 
+	margin-right: auto; 
+	padding : 5px ; 
+	width : 550px ;
+}

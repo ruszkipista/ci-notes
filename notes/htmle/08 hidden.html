@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Hidden Data Example</title>
+<style>
+    img	{ float:left;
+          margin-right:5px; }
+    output {color:red; }
+</style>
+<script>function multiply(q,p) {
+  var result = parseFloat(q.value) * parseFloat(p.value);
+  if (isNaN(result) || result <1) return "";
+  else return "Total: $"+result.toFixed(2);
+}
+</script>
+</head>
+
+<body>
+
+<img src="./resources/sale.png" width="200" height="120" alt="Sale">
+
+<form method="GET" action="http://localhost/echo.pl" 
+                   oninput="prod.value=multiply(qty,price)" > 
+Qty (60 Available) 
+<input type="number" id="qty" name="Quantity" size="2" min="0" max="60">
+<input type="hidden" id="price" name="Unit Price" value="24.99">
+<output name="prod" for="qty price"></output> <br>
+<input type="submit" name="Offer" value="Buy Teddy Bears">
+</form>
+
+</body>
+
+</html>

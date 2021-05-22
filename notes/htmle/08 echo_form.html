@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <script src="echo.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<form method="GET" action="echo.html">
+    <datalist id="browsers">
+      <option value="Chrome">
+      <option value="Firefox">
+      <option value="Internet Explorer">
+      <option value="Opera">
+      <option value="Safari">
+      <option value="Microsoft Edge">
+    </datalist>
+  
+  <p><label>User Name :<input type="text"     name="Name"></label></p>
+  <p><label>Password : <input type="password" name="Password"></label></p>
+  <p><label>City :     <input type="text"     name="City"  value="Dallas"   required></label></p>
+  <p><label>Area :     <input type="text"     name="Area"  value="Downtown" disabled></label></p>
+  <p><label>State :    <input type="text"     name="State" value="Texas"    readonly></label></p>
+  <p><label>Zip Code : <input type="text"     name="Zip Code" size="5" maxlength="5" ></label></p>
+  <p><label>Color:     <input type="color"    name="color"></label></p> 
+  <p><label>Range:     <input type="range"    name="range" min="1" max="10"></label></p> 
+  <p><label>Counter    <input type="number"   name="count" min="0" max="8" size="1"></label></p> 
+  <p><label>Time:      <input type="time"     name="time"></label></p> 
+  <p><label>URL :      <input type="url"      name="url" size="54"></label></p> 
+  <p><label>Email:     <input type="email" id="eml" name="email" size="45"></label></p> 
+  <p><label>What is your favorite browser:
+    <input type="text" list="browsers" name="browser" />
+  </label></p>
+
+  <fieldset>
+    <legend>Activities of Interest...</legend>
+    Sailing <input type="checkbox" name="Do" value="Sail"> <br>
+    Walking <input type="checkbox" name="Do" value="Walk"> <br>
+    Driving <input type="checkbox" name="Do" value="Drive"> <br>
+    Ski-ing <input type="checkbox" name="Do" value="Ski"> <br>
+    Jogging <input type="checkbox" name="Do" value="Jog"> <br>
+  </fieldset>
+
+  <fieldset><legend>What kind of language is HTML?</legend>
+     Scripting   <input type="radio" name="HTMLdefinition" value="Scripting"><br>
+     Markup      <input type="radio" name="HTMLdefinition" value="Markup"><br>
+     Programming <input type="radio" name="HTMLdefinition" value="Programming" checked>
+  </fieldset>
+
+<p><input type="submit" value="Submit Form"></p>
+</form>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+header	{ border: 1px solid red;	}
+h1	{ border:1px solid lime;	}
+h2	{ border:1px solid aqua;}
+h3	{ border:1px solid yellow; }
+main	{ border:1px solid aqua;}
+section	{ border: 1px solid fuchsia; display:block;}
+article	{ border: 1px solid lime;  display:block;	}
+aside { border:1px solid fuchsia; }
+span	{ border:2px solid yellow;}
+nav		{ border:1px solid lime;}
+footer	{ display:block; border:1px solid fuchsia; }

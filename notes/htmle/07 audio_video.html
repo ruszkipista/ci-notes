@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audio/Video Example</title>
+</head>
+
+<body>
+
+    <audio controls>
+        <!-- AAC (Advanced Audio Coding) codec "mp4a.40.2" -->
+        <source src="../resources/audio.mp3" type="audio/mpeg">
+        <!-- Ogg audio codec "vorbis" -->
+        <source src="../resources/audio.ogg" type="audio/ogg">
+        <p>Unfortunately your browser cannot play the audio format.
+            You may <a href="../resources/audio.mp3">right-click this link
+                and choose Save As</a> to download this video instead.</p>
+    </audio>
+
+    <video controls poster="../resources/poster.jpg">
+        <!-- Ogg video codec "theora" -->
+        <source src="../resources/video.ogv" type="video/ogg">
+        <!-- H.264 Baseline codec "avc1.42E01E" -->
+        <source src="../resources/video.mp4" type="video/mp4">
+        <track src="../resources/video.vtt" default>
+
+        <p>Unfortunately your browser cannot play the video format.
+            You may <a href="../resources/video.mp4">right-click this link
+                and choose Save As</a> to download this video instead.</p>
+    </video>
+
+    <ul>
+        <li>poster - what is to be displayed during download of video</li>
+        <li>controls - turns on the player controls</li>
+        <li>autoplay - starts playing as soon as completely downloaded</li>
+        <li>preload - start downloading immediately so that its ready when the user wants to play it</li>
+        <li>loop - continuous loop</li>
+        <li>muted - turns off volume</li>
+        <li>autoplay - starts playing as soon as completely downloaded</li>
+        <li>width / height - control dimensions</li>
+      </ul>
+</body>
+</html>

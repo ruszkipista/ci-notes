@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>DOM Meter</title>
+<script>
+var boxes = document.getElementsByClassName("box");
+
+function sum() {
+  var i , num =0;
+  for(i =0; i<boxes.length;i++)
+  { if(boxes[i].checked) num++ ;}
+  document.getElementById("mtr").value = num ;
+  document.getElementById("num").innerHTML = num;  
+}
+
+function zero() {    
+  var i = 0;
+  while (i<boxes.length)
+  { boxes[i].checked=false; i++; }
+  sum();
+}    
+</script>
+</head>
+
+<body>
+<img style="float:left" src="./resources/dom.png" width="85" height="85" alt="DOM">
+
+<fieldset contextmenu="commands">
+<input type="checkbox" class="box" onclick="sum()">1
+<input type="checkbox" class="box" onclick="sum()">2
+<input type="checkbox" class="box" onclick="sum()">3
+</fieldset>
+
+<menu type="context" id="commands">
+<menuitem label="Uncheck All" onclick="zero()">
+</menu>
+
+<meter id="mtr" value="0" min="0" max="3"></meter>
+
+<details>
+  <summary>Number of items Checked</summary>
+  <span id="num">0</span>
+</details>
+
+</html>

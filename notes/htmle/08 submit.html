@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Form Submission</title>
+<script>
+function send() {
+  document.getElementById("form-1").submit()  
+}
+function init() {
+  document.getElementById("btn").onclick=send;
+}
+onload=init;    
+</script>
+</head>
+
+<body>
+
+<form id="form-1" method="post" action="http://localhost/echo.pl">
+
+<fieldset>
+  <legend>Pizza Toppings</legend>
+  <input type="checkbox" name="Toppings" value="Pepperoni"> Pepperoni | 
+  <input type="checkbox" name="Toppings" value="Mushroom"> Mushroom | 
+  <input type="checkbox" name="Toppings" value="BBQ Sauce"> BBQ Sauce
+ </fieldset>
+                
+<input type="reset"  value="Reset Form">
+<input type="button" value="Help" onclick="alert('Choose Pizza Toppings')"> 
+<input type="submit"  name="SubmitName" value="Input Submit"> 
+<button type="submit" name="SubmitName" value="Button Submit">
+Button Submit
+</button>
+<input type="image" src="./resources/ibutton.png" alt="Submit Button" title="Click to submit form">
+<img id="btn" src="./resources/ibutton.png" alt="Submit Button" title="Click to submit with JavaScript">
+
+<button type="button" onclick="alert('Choose Pizza Toppings')">
+  <img src="./resources/logo-help.png" alt="Help">Help
+</button>
+<button type="submit"><img src="./resources/logo-submit.png" alt="Submit">Submit</button>
+<button type="reset"><img src="./resources/logo-reset.png" alt="Reset">Reset</button>
+</form>
+
+</body>
+
+</html>

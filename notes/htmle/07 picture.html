@@ -1,0 +1,21 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Picture Example</title>
+</head>
+<body>
+
+<picture>
+
+<source media="(min-width: 500px)" srcset="../resources/large.png">
+
+<source media="(min-width: 200px)" srcset="../resources/small.png">
+
+<!-- img tag for browsers that do not support picture element -->
+<img src="./resources/medium.png" alt="Regular Guy" width="103" height="125">
+
+</picture>
+
+</body>
+</html>

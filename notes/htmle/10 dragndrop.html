@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>DragNdrop </title>
+<script>
+function init() { 
+	var bin = document.getElementById("bin");
+	var gfx = document.getElementsByTagName("img");
+	var msg = document.getElementById("msg");					
+	
+	for(var i=0; i< gfx.length; i++)						
+	{
+		gfx[i].ondragstart = function(event) { event.dataTransfer.setData("Text", this.id); };
+	}
+	
+	bin.ondragover = function(event) { return false; };		
+
+	bin.ondrop = function(event) { 
+		var did = event.dataTransfer.getData("Text"); 		
+		var tag = document.getElementById(did);				
+		
+		if(did === "bin") { return false;}					
+		else { msg.innerHTML += "<li>"+did+"</li>"; }		
+		
+		tag.parentNode.removeChild(tag); 					
+		return false; 										
+	};								
+}
+onload=init;    
+</script>
+<style>
+p#api	 { position:absolute; top:0px; left:10px; width:96px; height:85px; background:url(./resources/dragndrop.png); }
+p#drag	 { position:absolute; top:0px; left:120px; width:415px; height:150px; }
+fieldset { position:absolute; top:90px; left:120px; width:415px; }    
+</style>
+</head>
+
+<body>
+
+<p id="api"></p>
+
+<p id="drag">
+	<img id="bin" 		src="./resources/bin.png">
+	<img id="Red" 		src="./resources/red.png">
+	<img id="Yellow" 	src="./resources/yel.png">
+	<img id="Green" 	src="./resources/grn.png">
+</p>
+<fieldset><legend>Folders Dropped:</legend><ol id="msg" ></ol></fieldset>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Web Messaging</title>
+<script src="http://localhost/msg.js"></script>
+<style>
+p#api	{ position:absolute; 	top:10px; 	left:10px; width:85px; height:85px; background:url(msg.png);	}
+p		{ position:absolute; 	top:0px; 	left:130px; }
+iframe	{ position:absolute;	top:50px; 	left:130px; }
+button	{ position:absolute; 	top:130px; 	left:10px; 	}    
+</style>
+
+</head>
+
+<body>
+
+<p id="api"> </p>
+
+<p id="host">Main Page Domain: </p>
+<iframe id="ifr" src="http://ineasysteps.com/msg-receive.html" width="350" height="120"></iframe>
+<button onclick="sendMsg()">Send Message</button>
+
+</body>
+
+</html>

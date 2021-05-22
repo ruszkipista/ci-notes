@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Select Option Example</title>
+</head>
+
+<body>
+
+<form method="GET" action="http://localhost/echo.pl">
+
+<p>How did you hear about us?</p>
+<select name="found" size="5">
+  <optgroup label="Media"> 
+    <option value="tv"   >TV</option>
+    <option value="radio">Web</option>
+    <option value="other">Other</option>
+  </optgroup>
+  <optgroup label="Web"> 
+    <option value="google">Google</option>
+    <option value="bing"  >Bing</option>
+  </optgroup>
+</select>
+<br>
+<select name="HTML List Type Selector">
+    <optgroup label="List Type">
+    <option value="UL">Unordered List</option>
+    <option value="OL">Ordered List</option>
+    <option value="DL" selected>Definition List</option>
+    </optgroup>
+    </select>
+<p><input type="submit" value="Submit Form"></p>
+
+</form>
+
+</body>
+
+</html>
