@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid sizing</title>
+    <style>
+        * { margin: 0; }
+        html { 
+        /* https://www.smashingmagazine.com/2016/05/fluid-typography/ */
+        --font-size-min-unit:    16px;
+        --font-size-min-no-unit: 16;
+        --font-size-max-no-unit: 24;
+        --screen-size-min-unit:    400px;
+        --screen-size-min-no-unit: 400;
+        --screen-size-max-no-unit: 800;          
+        font-size: calc(var(--font-size-min-unit) 
+                     + (var(--font-size-max-no-unit) - var(--font-size-min-no-unit)) 
+                     * (100vw - var(--screen-size-min-unit)) 
+                     / (var(--screen-size-max-no-unit) - var(--screen-size-min-no-unit)) );                
+        }
+
+        #wrapper {
+            width: 85%;
+            height: 1000px;
+            margin: 0 auto;
+            background-color: #ccc;
+            border: 2px dashed black;
+        }
+        #banner {
+            width: 100%;
+            height: 200px;
+            margin: 0;
+            background-color: #30f;
+        }
+        #col1 {
+            width: 50%;
+            height: 600px;
+            float: left;
+            background-color: green;
+        }
+        #col2 {
+            width: 25%;
+            height: 600px;
+            float: left;
+            background-color:orange;
+        }
+        #col3 {
+            width: 25%;
+            height: 600px;
+            float: left;
+            background-color: palevioletred;
+        }
+        #footer{
+            width: 100%;
+            height: 200px;
+            margin: 0;
+            background-color: yellow;
+            clear:both;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="banner"><h1>Fluid Typography</h1><p>Text text</p></div>
+        <div id="col1">Col1 50%</div>
+        <div id="col2">Col2 25%</div>
+        <div id="col3">Col3 25%</div>
+        <div id="footer">Footer</div>
+    </div>
+</body>
+
+</html>

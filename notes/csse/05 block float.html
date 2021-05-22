@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Floating Content Boxes</title>
+
+    <style>
+    p { background: yellow }
+    img[src*="1"] { float: right; border: 3px dashed red }
+    img[src*="2"] { float: left;  border: 3px dashed blue }
+    p.clear-left { clear: left }
+
+    div {margin: 3px;
+        border:black 1px solid;
+    }
+    #box1{background-color: lightblue; 
+          width:350px;
+          height:350px; 
+          float:left
+    }
+    #box2{background-color: greenyellow;
+          width:350px;
+          height:350px;
+          float: left;
+    }
+    #box3{background-color: coral;
+          width:350px;
+          height:350px;
+          float:left
+    }
+    </style>
+</head>
+
+<body>
+
+    <p>Massive acceleration - the forbidden fruit! It's easy to avoid such unlawful 
+        <img src="05 viper-1.png" width="150" height="128" alt="Viper Front"> 
+        activities in a normal vehicle. But there is an evil serpent; a Viper that
+        tempts you to take a bite out of the asphalt. With a tasty 500-hp V10 powering
+        a mere 3,300-lb roadster, the Dodge Viper SRT-10 tricks you into playing music with the loud pedal.
+    </p>
+
+    <p>This car is too excessive, too epic for most people to use on a daily basis. 
+        <img src="05 viper-2.png" width="155" height="115" alt="Viper Rear">
+        But for otherwise nice couples who need only two seats this is the car that
+        will shame those who come up against them.
+    </p>
+
+    <p class="clear-left">If you can afford to... Buy one. You'll like it.</p>
+
+    <hr>
+    <div id="box1">
+    Phasellus sit amet faucibus sapien. Vestibulum placerat ligula sit amet quam molestie viverra. Nunc eu convallis ligula. Aenean rutrum nibh nec sem rhoncus, sit amet lacinia ligula consectetur. Duis lectus metus, consequat at dapibus non, molestie nec nisl. Suspendisse id urna ipsum. Aenean at bibendum lacus. Aliquam tempor, ante non aliquam fringilla, ante risus dictum erat, a convallis augue orci at mi. Donec nibh sem, dapibus euismod diam sit amet, mollis consequat odio. Morbi sagittis lorem molestie magna sagittis, eget tincidunt enim placerat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed mollis lacus turpis. Etiam facilisis augue vel lorem consectetur dapibus at sed arcu. Cras ut viverra urna. Proin lobortis sem metus, non commodo diam mattis euismod. Maecenas at eleifend quam, et fermentum ante.
+    </div>
+    <div id="box2">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat dui nulla. Nunc semper metus sem, ut viverra odio laoreet a. Mauris neque odio, vulputate et pretium eu, consequat in mi. Integer feugiat fermentum gravida. Fusce commodo nec tortor eget facilisis. Aenean a euismod dui. Vestibulum ante odio, sodales non ex sit amet, maximus mollis purus.
+    Aliquam vel diam a sapien lacinia pharetra aliquet sit amet tellus. Cras molestie venenatis tincidunt. Morbi lobortis erat a tincidunt tincidunt. Nam sollicitudin lacus et magna convallis rhoncus. Nulla in consequat risus. Aliquam id erat vulputate, luctus turpis ac, porttitor ante. Mauris id augue congue orci pulvinar varius. Vivamus laoreet nunc nisl, vitae venenatis nulla congue mollis. Suspendisse accumsan ligula tellus, eget commodo eros efficitur eget.
+    </div>
+    <div id="box3">
+    Nunc aliquet arcu nec ipsum tincidunt, non aliquet erat imperdiet. Donec vel turpis eget eros cursus hendrerit ac sed odio. Maecenas ut finibus enim. Vivamus congue orci erat, et consectetur arcu iaculis consequat. Sed arcu sapien, efficitur sit amet faucibus maximus, blandit eget mauris. Etiam accumsan aliquet quam, sed mollis sem porttitor sit amet. Etiam ullamcorper ut ligula mattis rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris id arcu eget turpis dignissim vehicula eget id turpis. Nam consequat eu dui eget vehicula.
+    Nullam faucibus, est eu mattis congue, lorem dui tempor mauris, eget lobortis augue sapien eget dui. Mauris aliquet feugiat odio, nec sagittis massa laoreet eu. Praesent bibendum justo erat, et dignissim elit elementum id. Vivamus ut nulla placerat, commodo nulla ac, aliquam felis. Integer pretium arcu rutrum maximus sodales. Phasellus feugiat enim a libero consectetur, eget faucibus turpis molestie. Donec sodales orci eget tellus sodales efficitur. Donec vitae libero a ligula sollicitudin ullamcorper. Integer lacinia ac ex ut euismod. Vivamus sollicitudin molestie justo, eu luctus neque pretium at. Ut feugiat ex felis, vel interdum augue tincidunt sed. Nunc hendrerit auctor dui ac fermentum.         
+    </div>
+</body>
+
+</html>

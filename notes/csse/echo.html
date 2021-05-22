@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Echo</title>
+<style>
+    table { width:550px; font-family:sans-serif; }
+    caption { text-align:left; padding-left:5px; height:25px; }
+    col.no { width:20%; }
+    table thead tr th { color:white; background:#FF6600; }
+    table tfoot tr td { border-top:2px solid #FF6600; 
+                        height:28px; vertical-align:bottom; }
+    table tbody tr td { text-align:center; }
+    table tbody tr.stripe { background:#FEEDB7; }
+</style>
+<script>
+function create_table() {
+    formdata = JSON.parse(window.localStorage.getItem('formdata'));
+    window.localStorage.removeItem('formdata');
+    let labels = ["Name","Value"];
+    let tabs = document.getElementsByTagName("table");
+    for (let tab of tabs) {
+        // TABLE HEAD
+        let thead = tab.createTHead();
+        let row   = thead.insertRow();
+        for (let label of labels) {
+            let th   = document.createElement("th");
+            let text = document.createTextNode(label);
+            th.appendChild(text);
+            row.appendChild(th);
+        }
+        // TABLE FOOT
+        let tfoot = tab.createTFoot();
+        row = tfoot.insertRow()
+        let cell = row.insertCell();
+        cell.colSpan = labels.length;
+    
+        // TABLE BODY
+        let tbody = tab.createTBody();
+        for (let line=0; line<formdata.length;line++){
+            let row = tbody.insertRow();
+            if(line%2 == 0){row.className="stripe"};
+            for (let value of formdata[line]) {
+                let cell = row.insertCell();
+                let text = document.createTextNode(value);
+                cell.appendChild(text);
+            }
+        }
+    }
+}
+onload=create_table;
+</script>
+</head>
+
+<body>
+    <h5>Name=Value Pairs Processed</h3>
+<table>
+</table>
+</body>
+</html>

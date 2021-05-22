@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <title>List Properties</title>
+  <style>
+  /* show boundaries */
+  li	{ background: yellow 	}
+  ol,ul { border : 1px solid red }
+  ol.outside-markers	{ list-style-position: outside	}
+  ol.inside-markers	{ list-style-position: inside	}
+</style>
+</head>
+
+<body>
+
+  <h1>Lists</h1>
+
+  <h2>outside-markers</h2>
+  <ol class="outside-markers">
+    <li>List
+    <li>Markers
+    <li>Outside content box
+  </ol>
+
+  <h2>inside-markers</h2>
+  <ol class="inside-markers">
+    <li>List
+    <li>Markers
+    <li>Inside content box
+  </ol>
+
+  <h2>inside-markers</h2>
+  <ul>
+    <li>List
+    <li>Style
+      <ol class="inside-markers">
+        <li>List
+        <li>Markers
+        <li>Inside content box
+      </ol>
+    <li>Shorthand
+  </ul>
+
+  <h2>list-style-type</h2>
+
+  <ul>
+    <li style="list-style-type:none;">list-style-type:none;</li>
+    <li style="list-style-type:disc;">list-style-type:disc;</li>
+    <li style="list-style-type:circle;">list-style-type:circle;</li>
+    <li style="list-style-type:square;">list-style-type:square;</li>
+    <li style="list-style-type:decimal-leading-zero;">list-style-type:decimal-leading-zero;</li>
+    <li style="list-style-type:upper-roman;">list-style-type:upper-roman;</li>
+    <li style="list-style-type:upper-alpha;">list-style-type:upper-alpha;</li>
+    <li style="list-style-type:lower-alpha;">list-style-type:lower-alpha;</li>
+    <li style="list-style-type:lower-greek;">list-style-type:lower-greek;</li>
+  </ul>
+
+  <h2>list-style-image</h2>
+
+  <ul>
+    <li style="list-style-image:none;">list-style-image:none;</li>
+    <li style="list-style-image:url(http://placekitten.com/10/10);">list-style-image:url(http://placekitten.com/10/10);
+    </li>
+    <li style="list-style-image:url(http://placekitten.com/50/50);">list-style-image:url(http://placekitten.com/50/50);
+    </li>
+  </ul>
+
+  <h2>line-style-position</h2>
+
+  <ul>
+    <li style="list-style-position:outside;">list-style-position:outside;</li>
+    <li style="list-style-position:inside;">list-style-position:inside;</li>
+  </ul>
+
+  <h2>Shortcut for list-styles</h2>
+
+
+  list-style: [list-style-type] [list-style-position] [list-style-image]
+
+
+
+  <h1>Creating a horizontal menu with unordered lists</h1>
+
+  <p>The key is &quot;float:left;&quot;</p>
+
+  <ul>
+    <li style="list-style-type:none;float:left;margin-right:10px;">Home</li>
+    <li style="list-style-type:none;float:left;margin-right:10px;">About</li>
+    <li style="list-style-type:none;float:left;margin-right:10px;">Contact Us</li>
+  </ul>
+
+</body>
+
+</html>

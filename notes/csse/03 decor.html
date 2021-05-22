@@ -1,0 +1,43 @@
+<!DOCTYPE HTML >
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Text Decoration & Transform</title>
+
+<style>
+/* set font styles */
+#para-1	{ font: medium "Courier", monospace; background: #CCCCFF }
+
+/* set text decoration and transform classes */
+span.under 	{ text-decoration: underline }
+span.thru	{ text-decoration: line-through }
+span.rails	{ text-decoration: overline underline blink }
+
+span.lower	{ text-transform: lowercase }
+span.upper	{ text-transform: uppercase }
+span.caps	{ text-transform: capitalize }
+
+a.plain	{ text-decoration: none }    
+</style>
+
+</head>
+
+<body>
+
+<p id="para-1">You know that it's 
+<span class = "under caps">important</span> when<br>it is 
+<span class = "under">underlined</span><br>and that it's been 
+<span class = "thru caps">cancelled</span> when<br>it has been 
+<span class = "thru">struck through</span><br>but you also must remember to<br>
+<span class = "rails upper">read between the lines</span><br>
+</p>
+
+<hr>
+
+<p>
+  <a href = "http://w3c.org">Regular link</a> |
+  <a class = "plain" href = "http://w3c.org">Plain link</a>
+</p> 
+
+</body>
+</html> 

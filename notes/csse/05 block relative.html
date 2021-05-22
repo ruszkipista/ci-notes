@@ -1,0 +1,64 @@
+<!DOCTYPE HTML >
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Relative Positioning</title>
+
+<style>
+div#pale-gray { width : 400px ; height : 50px ; background : #CCC ; margin : 20px }
+div#lite-gray { position : relative ; left : -4px ; top : -4px ; height : 100% ; background : #999 }
+div#dark-gray { position : relative ; left : -4px ; top : -4px ; height : 100% ; background : #666 }
+div#text-box { position : relative ; left : -4px ; top : -4px ; height : 100% ; background : lime }
+
+span { position : relative ; top : -18px ; left : 100px ; background : lime ; border : 1px solid black }
+p { background : aqua ; border : 1px solid black } 
+
+div {margin: 3px;
+        border:black 1px solid;
+    }
+    #box1{background-color: lightblue; 
+          width:350px;
+          height:350px; 
+    }
+    #box2{background-color: greenyellow;
+          width:350px;
+          height:350px;
+          position: relative;
+          top: 100px;
+          left: 100px;
+    }
+    #box3{background-color: coral;
+          width:350px;
+          height:350px;
+    }
+</style>
+
+</head>
+
+<body>
+
+<div id="pale-gray"> 
+ <div id="lite-gray"> 
+  <div id="dark-gray"> 
+   <div id="text-box">Text content here on the innermost element - outer offset elements create a drop shadow effect</div>
+   </div>
+  </div>
+</div>
+
+<p>There is <span>a repositioned span element</span> on this line - it pays no heed to other paragraph content for it is an inline content box</p>
+
+<hr>
+<div id="box1">
+Phasellus sit amet faucibus sapien. Vestibulum placerat ligula sit amet quam molestie viverra. Nunc eu convallis ligula. Aenean rutrum nibh nec sem rhoncus, sit amet lacinia ligula consectetur. Duis lectus metus, consequat at dapibus non, molestie nec nisl. Suspendisse id urna ipsum. Aenean at bibendum lacus. Aliquam tempor, ante non aliquam fringilla, ante risus dictum erat, a convallis augue orci at mi. Donec nibh sem, dapibus euismod diam sit amet, mollis consequat odio. Morbi sagittis lorem molestie magna sagittis, eget tincidunt enim placerat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed mollis lacus turpis. Etiam facilisis augue vel lorem consectetur dapibus at sed arcu. Cras ut viverra urna. Proin lobortis sem metus, non commodo diam mattis euismod. Maecenas at eleifend quam, et fermentum ante.
+</div>
+<div id="box2">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat dui nulla. Nunc semper metus sem, ut viverra odio laoreet a. Mauris neque odio, vulputate et pretium eu, consequat in mi. Integer feugiat fermentum gravida. Fusce commodo nec tortor eget facilisis. Aenean a euismod dui. Vestibulum ante odio, sodales non ex sit amet, maximus mollis purus.
+Aliquam vel diam a sapien lacinia pharetra aliquet sit amet tellus. Cras molestie venenatis tincidunt. Morbi lobortis erat a tincidunt tincidunt. Nam sollicitudin lacus et magna convallis rhoncus. Nulla in consequat risus. Aliquam id erat vulputate, luctus turpis ac, porttitor ante. Mauris id augue congue orci pulvinar varius. Vivamus laoreet nunc nisl, vitae venenatis nulla congue mollis. Suspendisse accumsan ligula tellus, eget commodo eros efficitur eget.
+</div>
+<div id="box3">
+Nunc aliquet arcu nec ipsum tincidunt, non aliquet erat imperdiet. Donec vel turpis eget eros cursus hendrerit ac sed odio. Maecenas ut finibus enim. Vivamus congue orci erat, et consectetur arcu iaculis consequat. Sed arcu sapien, efficitur sit amet faucibus maximus, blandit eget mauris. Etiam accumsan aliquet quam, sed mollis sem porttitor sit amet. Etiam ullamcorper ut ligula mattis rhoncus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris id arcu eget turpis dignissim vehicula eget id turpis. Nam consequat eu dui eget vehicula.
+Nullam faucibus, est eu mattis congue, lorem dui tempor mauris, eget lobortis augue sapien eget dui. Mauris aliquet feugiat odio, nec sagittis massa laoreet eu. Praesent bibendum justo erat, et dignissim elit elementum id. Vivamus ut nulla placerat, commodo nulla ac, aliquam felis. Integer pretium arcu rutrum maximus sodales. Phasellus feugiat enim a libero consectetur, eget faucibus turpis molestie. Donec sodales orci eget tellus sodales efficitur. Donec vitae libero a ligula sollicitudin ullamcorper. Integer lacinia ac ex ut euismod. Vivamus sollicitudin molestie justo, eu luctus neque pretium at. Ut feugiat ex felis, vel interdum augue tincidunt sed. Nunc hendrerit auctor dui ac fermentum.         
+</div>
+
+</body>
+</html> 

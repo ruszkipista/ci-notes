@@ -1,0 +1,44 @@
+<!DOCTYPE HTML >
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Centering Content</title>
+
+<style>
+div { border : 0.1em solid black ; 
+      background : orange; margin: 0 0 2em;   width: 20em;}
+div.inner       { background:yellow; margin: 0 ; width: 10em;}
+div.center      { background:aqua;   margin: auto;  }
+div.center-text { background:lime;   text-align : center; }
+div.relative-block{ position:relative; height: 6em; margin: 2em 0 0 0;}
+div.abs-block     { position:absolute; width:60%; left: 50%; top: 50%;
+   transform: translate(-50%, -50%); /* Move element left and up */
+}
+</style>
+
+</head>
+
+<body>
+
+<div>
+  Default Position
+  <div class="inner">Default Position</div>
+  <div class="inner center">Centered Block</div>
+</div>
+
+<div class="center">
+  Centered Block
+  <div class="inner">Default Position</div>
+  <div class="center inner">Centered Block</div>
+  <div class="center inner center-text">Centered Block + Centered Content</div>
+</div>
+
+<div class="relative-block">
+  Undisturbed Relative positioned block
+  <div class="abs-block center-text">
+     Centered Absolute Block + Centered Content
+  </div>
+</div>
+
+</body>
+</html> 

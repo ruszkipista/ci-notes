@@ -1,0 +1,34 @@
+<!DOCTYPE HTML >
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tabs</title>
+
+<style>
+/* set tabs menu position */
+dl#menu	{ position: absolute; top: 0px; left: 10px; margin : 0 }
+/* set general tab styles - horizontal format */
+dt.tab	{ display: block; float: left; margin-right: 5px; text-align:center 	}
+/* set general anchor styles - fill the container */
+dt.tab a	{ display: block; text-decoration:none; color:white; font-weight: bold; width: 100px }
+/* MouseOut state (default) */
+dt.tab a	{ background: blue; border: 5px outset blue	}
+/* MouseOver state (hover) */
+dt.tab a:hover	{ padding-top:20px; background: red; border-color: red	}
+/* MouseDown state (active) */
+dt.tab a:active	{ padding-top:20px; background: green; border-color: green	}
+</style>
+
+</head>
+
+<body>
+
+<dl id = "menu">
+<dt class="tab"><a href="a.html">Tab 1</a></dt>
+<dt class="tab"><a href="b.html">Tab 2</a></dt>
+<dt class="tab"><a href="c.html">Tab 3</a></dt>
+</dl>
+
+</body>
+
+</html>

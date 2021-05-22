@@ -1,0 +1,25 @@
+<!DOCTYPE HTML >
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Background Repeat</title>
+
+<style>
+span { background : yellow ; margin : 0 0 0 10em }
+p    { background: url("04 background tile.png") fuchsia repeat ; height : 3.5em }
+p#x  { background-repeat : repeat-x }
+p#y  { background-repeat: repeat-y }
+p#no { background-repeat : no-repeat }
+</style>
+
+</head>
+
+<body>
+
+<p><span>Repeat - Default</span></p>
+<p id="x"><span>Repeat-X</span></p>
+<p id="y"><span>Repeat-Y</span></p>
+<p id="no"><span>No Repeat</span></p>
+
+</body>
+</html> 

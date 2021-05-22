@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout as a Flexible Container</title>
+    <style>
+        body{ font-size:2rem; text-align: center;}
+        #wrapper {
+            width:80%;
+            border: 3px dashed grey;
+            margin: 0 auto;
+        }
+        .container {
+            display: flex;
+            border: 2px solid blue;
+        }
+        .column1-2 {
+            width: 50%;
+            border: 2px solid orange;
+        }
+        .column1-3 {
+            width: 33%;
+            border: 2px solid lightblue;
+        }
+        .column1-12 {
+            width: 8.3%;
+            border: 2px solid lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <div class="column1-2">2</div>
+            <div class="column1-2">2</div>
+        </div>
+        <div class="container">
+            <div class="column1-3">3</div>
+            <div class="column1-3">3</div>
+            <div class="column1-3">3</div>
+        </div>
+        <div class="container">
+            <div class="column1-12">12</div>
+            <div class="column1-12">12</div>
+            <div class="column1-12">12</div>
+            <div class="column1-12">12</div>
+            <div class="column1-12">12</div>
+            <div class="column1-12">12</div>
+            <div class="column1-12">12</div>
+            <div class="column1-12">12</div>
+            <div class="column1-12">12</div>
+            <div class="column1-12">12</div>
+            <div class="column1-12">12</div>
+            <div class="column1-12">12</div>
+        </div>
+    </div>
+</body>
+
+</html>

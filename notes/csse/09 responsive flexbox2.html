@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox2</title>
+    <style>
+        #container {
+            display: flex;
+            border: 3px solid green;
+        }
+        #initial {
+            flex: initial;
+            width: 500px;
+            min-width: 200px;
+            border: 3px solid red;
+        }
+        #none {
+            flex: none;
+            width: 100px;
+            border: 3px solid black;
+        }
+        #flex1 {
+            flex: 1;
+            border: 3px solid blue;
+        }
+        #flex2 {
+            flex: 2;
+            border: 3px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="initial">500px when there is room, shrinks to 200px if there is not room - but no smaller than 200px</div>
+        <div id="none">Always 100px</div>
+        <div id="flex1">1/3 of the remaining width</div>
+        <div id="flex2">2/3 of the remaining width</div>
+    </div>
+</body>
+
+</html>

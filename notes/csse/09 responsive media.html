@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+    #wrapper {
+        width:75%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .container {
+        width: 100%;
+        height: 1000px;
+    }
+    @media (min-width: 320px) {
+        div.container { background-color: lightblue; }
+        div.container:after { content: "Width between 320px and 768px"; }
+    }
+    @media (min-width: 768px) {
+        div.container { background-color: blue; color:white;}
+        div.container:after { content: "Width between 768px and 1023px"; }
+    }
+    @media (min-width: 1024px) {
+        div.container { background-color: navy; }
+        div.container:after { content: "Width at least 1024px"; color:white; }
+    }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="container"></div>
+    </div>
+</body>
+
+</html>

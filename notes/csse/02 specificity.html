@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS mixed selectors</title>
+    <style>
+      /* Remove the code blocks one by one starting with
+	    the block numbered 1 (which is the most specific rule)
+      and see what happens. Try to figure out 
+      why some rules are applied and others are not. */ 
+      
+      /* 7. The last one to be applied */
+      .blueBackground {width: 50px;height: 50px; background-color: #0779d3; /* blue color */}
+      /* selector specificity (0,1,0)
+
+      /* 2. This will apply after id + class combination */
+      .wrapper #main { background-color: orange; }
+      /* selector specificity (1,1,0)
+
+      /* 6. It comes after the blueBackground */
+      .box { width: 50px; height: 50px; background-color: yellow; }
+      /* selector specificity (0,1,0)
+
+      /* 1. id + class always beats id. More specific than just ID. */
+      /* black color */
+      #main.blueBackground.box { background-color: #4a4a4f;  }
+      /* selector specificity (1,2,0) : 100 (id) + 10 (class) + 10 (class) */
+
+      /* 3. beats every selector without ID */
+      /* red color */
+      #main { background-color: #e84610;  }
+      /* selector specificity (1,0,0) : 100 (id) */
+
+      /* 5. More specific than just having one class */
+      .box.blueBackground { background-color: purple; }
+      /* selector specificity (0,2,0) : 10 (class) + 10 (class) */
+
+       /* 4. Selecting more parents is more specific
+       than selecting all the classes from the same element*/ 
+      .wrapper .container .blueBackground { background-color: blue; }
+      /* selector specificity (0,3,0) : 10 (class) + 10 (class) + 10 (class) */
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="blueBackground box" id="main"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML >
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Columns</title>
+
+<style>
+* { margin: 0; padding : 0 ; text-align : center }
+html, body { height: 100%; }
+#wrapper 
+{ 
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -30px; /* the bottom margin is the negative value of the footer's height */
+}
+#hdr { height: 60px; background : aqua }
+#ftr { height: 30px; background : aqua }
+#nav { float : left ; width : 100px ; background : yellow  }
+#ads { float : right ; width : 100px ; background : fuchsia }
+#txt { margin : 0 100px ; background : lime }  
+</style>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+  <div id="hdr">Header Panel<br><img src="tile.png" width="250" height="25" alt="Box"></div>
+
+  <div id="nav">Navigation Panel<br>&bull;Link<br>&bull;Link</div>
+
+  <div id="ads">Supplement Panel<br><img src="tile.png" width="75" height="100" alt="Box"></div>
+
+  <div id="txt">Content Panel<br><img src="tile.png" width="150" height="300" alt="Box"></div>
+        
+</div>
+        
+<div id="ftr">Footer Panel</div>
+
+</body>
+</html> 

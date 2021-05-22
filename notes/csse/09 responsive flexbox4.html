@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible font size</title>
+    <style>
+        #wrapper {
+            width:80%;
+            border: 3px dashed grey;
+            margin: 0 auto;
+        }
+        .container {
+            display: flex;
+            border: 2px solid blue;
+        }
+        .column1-3 {
+            width: 33.333333%;
+            border: 2px solid orange;
+        }
+        .column3-3 {
+            columns:3;
+            border: 2px solid lightblue;
+        }
+        .font-size-rem{
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .font-size-fluid { 
+          /* https://www.smashingmagazine.com/2016/05/fluid-typography/ */
+          --font-size-min-unit:    16px;
+          --font-size-min-no-unit: 16;
+          --font-size-max-no-unit: 24;
+          --screen-size-min-unit:    400px;
+          --screen-size-min-no-unit: 400;
+          --screen-size-max-no-unit: 800;          
+          font-size: calc(var(--font-size-min-unit) 
+                       + (var(--font-size-max-no-unit) - var(--font-size-min-no-unit)) 
+                       * (100vw - var(--screen-size-min-unit)) 
+                       / (var(--screen-size-max-no-unit) - var(--screen-size-min-no-unit)) );               
+         }
+        .font-size-vw   { font-size: 2vw; }
+        .font-size-vh   { font-size: 2vh; }
+        .font-size-vmin { font-size: 2vmin; }
+        .font-size-vmax { font-size: 2vmax; }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <div class="column1-3"><span class="font-size-rem">Fixed default font size</span><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat dui nulla. Nunc semper metus sem, ut viverra odio laoreet a. Mauris neque odio, vulputate et pretium eu, consequat in mi. Integer feugiat fermentum gravida. Fusce commodo nec tortor eget facilisis.
+            </div>
+            <div class="column1-3 font-size-vw"><span class="font-size-rem">Viewport width relative font size</span><br>
+                Phasellus sit amet faucibus sapien. Vestibulum placerat ligula sit amet quam molestie viverra. Nunc eu convallis ligula. Aenean rutrum nibh nec sem rhoncus, sit amet lacinia ligula consectetur. Duis lectus metus, consequat at dapibus non, molestie nec nisl.
+            </div>
+            <div class="column1-3 font-size-vh"><span class="font-size-rem">Viewport height relative font size</span><br>
+                Nunc aliquet arcu nec ipsum tincidunt, non aliquet erat imperdiet. Donec vel turpis eget eros cursus hendrerit ac sed odio. Maecenas ut finibus enim. Vivamus congue orci erat, et consectetur arcu iaculis consequat. Sed arcu sapien, efficitur sit amet faucibus maximus, blandit eget mauris.
+            </div>
+        </div>
+        <div class="container">
+            <div class="column1-3 font-size-fluid"><span class="font-size-rem">Viewport width dependent Fluid font size</span><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat dui nulla. Nunc semper metus sem, ut viverra odio laoreet a. Mauris neque odio, vulputate et pretium eu, consequat in mi. Integer feugiat fermentum gravida. Fusce commodo nec tortor eget facilisis.
+            </div>
+            <div class="column1-3 font-size-vmin"><span class="font-size-rem">Viewport minimum relative font size</span><br>
+                Phasellus sit amet faucibus sapien. Vestibulum placerat ligula sit amet quam molestie viverra. Nunc eu convallis ligula. Aenean rutrum nibh nec sem rhoncus, sit amet lacinia ligula consectetur. Duis lectus metus, consequat at dapibus non, molestie nec nisl.
+            </div>
+            <div class="column1-3 font-size-vmax"><span class="font-size-rem">Viewport maximum relative font size</span><br>
+                Nunc aliquet arcu nec ipsum tincidunt, non aliquet erat imperdiet. Donec vel turpis eget eros cursus hendrerit ac sed odio. Maecenas ut finibus enim. Vivamus congue orci erat, et consectetur arcu iaculis consequat. Sed arcu sapien, efficitur sit amet faucibus maximus, blandit eget mauris.
+            </div>
+        </div>
+        <div class="container">
+            <div class="column3-3 font-size-vw"><span class="font-size-rem">Viewport width relative font size</span><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat dui nulla. Nunc semper metus sem, ut viverra odio laoreet a. Mauris neque odio, vulputate et pretium eu, consequat in mi. Integer feugiat fermentum gravida. Fusce commodo nec tortor eget facilisis.
+                Phasellus sit amet faucibus sapien. Vestibulum placerat ligula sit amet quam molestie viverra. Nunc eu convallis ligula. Aenean rutrum nibh nec sem rhoncus, sit amet lacinia ligula consectetur. Duis lectus metus, consequat at dapibus non, molestie nec nisl.
+                Nunc aliquet arcu nec ipsum tincidunt, non aliquet erat imperdiet. Donec vel turpis eget eros cursus hendrerit ac sed odio. Maecenas ut finibus enim. Vivamus congue orci erat, et consectetur arcu iaculis consequat. Sed arcu sapien, efficitur sit amet faucibus maximus, blandit eget mauris.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

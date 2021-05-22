@@ -1,0 +1,38 @@
+<!DOCTYPE HTML >
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Descendant Selector</title>
+
+<style>
+/*
+ul li { color : red } 
+ol li { color : blue }
+*/
+
+/*
+#menu li { color : green } 
+*/
+
+#menu>ul>li { color : orange }
+#menu>ol>li { color : purple }     
+</style>
+
+</head>
+
+<body>
+
+<div id="menu">
+<ul>
+<li>Bigger Burgers</li>
+<li>Buffalo Wings</li>
+<li>Deepcrust Pizza</li>
+</ul>
+<ol>
+<li>Cola</li>
+<li>Beer</li>
+</ol>
+</div>
+
+</body>
+</html> 

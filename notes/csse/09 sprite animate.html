@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Sprite</title>
+    <style>
+        #wrapper {
+            background-color: #ccc;
+        }
+        .container {
+            /* display: flex; */
+            border: 2px solid blue;
+            margin: 0 auto;
+        }
+        :root {
+            --bg-sprite-image: url("09 sprite coin.jpg");
+            --bg-sprite-width:  53px;
+            --bg-sprite-height: 53px;
+            --bg-sprite-cols: 6;
+            --bg-sprite-rows: 6;
+            --bg-sprite-frame-change: 0.05s;
+            --bg-sprite-frames: calc(var(--bg-sprite-cols) * var(--bg-sprite-rows));
+            --bg-sprite-col-width-perc:  calc( 100% / var(--bg-sprite-cols));
+            --bg-sprite-row-height-perc: calc( 100% / var(--bg-sprite-rows));
+            --bg-sprite-col-perc: calc( 100% / calc( var(--bg-sprite-cols) - 1 ));
+            --bg-sprite-row-perc: calc( 100% / calc( var(--bg-sprite-rows) - 1 ));
+        }
+        .bg-animate {
+            width:  var(--bg-sprite-width); 
+            height: var(--bg-sprite-height);
+            background: var(--bg-sprite-image) no-repeat;
+            animation-name: playX, playY;
+            animation-duration: calc(var(--bg-sprite-frame-change) * var(--bg-sprite-cols)), calc(var(--bg-sprite-frame-change) * var(--bg-sprite-frames));
+            animation-timing-function: steps(var(--bg-sprite-cols)), steps(var(--bg-sprite-rows));
+            animation-iteration-count: infinite, infinite;
+         }
+        @keyframes playX {
+            from { background-position-x:    0px; }
+            to   { background-position-x: -320px; }
+        }
+        @keyframes playY {
+            from { background-position-y:    0px; }
+            to   { background-position-y: -315px; }
+        }
+        .bg-sprite-selector {
+            display:inline-block;
+            width:          var(--bg-sprite-col-width-perc); 
+            padding-bottom: var(--bg-sprite-row-height-perc);
+            background-image: var(--bg-sprite-image);
+            background-position: 0% 0%;
+            background-size: calc(100% * var(--bg-sprite-cols)) calc(100% * var(--bg-sprite-rows));
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="09 sprite coin.jpg" alt="spinning coin in phases">
+    <div id="wrapper">
+      <div class="container bg-animate"></div>
+    </div>
+    <!-- pick sub-image at coordinate 0,0 -->
+    <div class="container bg-sprite-selector" 
+         style="background-position: calc(0 * var(--bg-sprite-col-perc)) calc(0 * var(--bg-sprite-row-perc));">
+    </div>
+    <!-- pick sub-image at coordinate 0,3 -->
+    <div class="container bg-sprite-selector" 
+         style="background-position: calc(0 * var(--bg-sprite-col-perc)) calc(3 * var(--bg-sprite-row-perc));">
+    </div>
+    <!-- pick sub-image at coordinate 3,5 -->
+    <div class="container bg-sprite-selector" 
+         style="background-position: calc(3 * var(--bg-sprite-col-perc)) calc(5 * var(--bg-sprite-row-perc));">
+    </div>
+
+</body>
+
+</html>

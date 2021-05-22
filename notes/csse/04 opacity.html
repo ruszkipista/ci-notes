@@ -1,0 +1,26 @@
+<!DOCTYPE HTML >
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Opacity</title>
+<style>
+/* CSS3 OPACITY
+opacity : [alpha-value] | inherit
+alpha-value is in the range 0.0 (fully transparent) to 1.0 (fully opaque)
+*/
+div { float : left ; margin : 10px ; height : 120px ; width : 120px ; border : 5px solid black ; text-align : center }
+div#box-1 { background : rgb( 255, 255, 0 ) }  
+div#box-2 { background : rgba( 255, 255, 0, 0.5 )   } 
+div#box-3 { background : rgb( 255, 255, 0 ) ; opacity : 0.5 }     
+</style>
+
+</head>
+
+<body>
+ 
+<div id="box-1"><p>100% Opaque</p></div>
+<div id="box-2"><p>50% Alpha</p></div>
+<div id="box-3"><p>50% Opacity</p></div>
+  
+</body>
+</html> 

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML >
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Child and Sibling Selectors</title>
+
+<style>
+/* Select adjacent sibling following h3 element. */
+h3 + p { background: yellow }
+
+/* Select span child of paragraph element */
+p > span { background : lime }
+
+/* Select ul child of body element */
+body > ul { background : fuchsia }
+
+/* Select li child of ul element */ 
+body > ul > li { background : aqua }
+
+/* Select span grandchild of ul element */ 
+body > ul > li > span { background : orange }    
+</style>
+
+</head>
+
+<body>
+
+<h3>Heading : Child</h3>
+
+<p>Paragraph : Child</p>
+
+<p>Paragraph : Child <span>Span : Grandchild</span></p>
+
+<ul>
+<li>List Item : Grandchild</li>
+<li>List Item : Grandchild <span>Span : Great Grandchild</span></li>
+</ul>
+
+</body>
+</html> 

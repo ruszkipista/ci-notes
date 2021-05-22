@@ -1,0 +1,40 @@
+<!DOCTYPE HTML >
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Font Weight</title>
+
+<style>
+/* set font weights numerically */
+p#para-1	{ font-weight: 400  }
+p#para-2 { font-weight: 700 }
+
+/* set font weights with keywords */
+span.bold	{ font-weight: bold }
+span.more	{ font-weight: bolder }
+span.norm	{ font-weight: normal }
+span.less	{ font-weight: lighter }
+</style>
+
+</head>
+
+<body>
+
+<p id = "para-1">
+This normal weight text can become 
+<span class = "bold">bold</span> or 
+<span class = "more">bolder</span> <br>
+</p>
+
+
+<p id = "para-2">
+This bold weight text can get
+<span class = "norm">light</span> or 
+<span class = "less">lighter</span>
+</p>
+
+<h2>...here's a heading with <span class = "less">lighter</span> text</h2>
+
+</body>
+
+</html>

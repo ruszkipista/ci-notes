@@ -1,5 +1,7 @@
 # [Notes](https://ruszkipista.github.io/ci-notes/)
 - [HTML Essentials](https://ruszkipista.github.io/ci-notes/notes/HTMLEssentialsinEasySteps.html)
+- [CSS Essentials 1-5](https://ruszkipista.github.io/ci-notes/notes/CSSEssentialsinEasySteps1-5.html)
+- [CSS Essentials 6-11](https://ruszkipista.github.io/ci-notes/notes/CSSEssentialsinEasySteps6-11.html)
 - [Responsive Web Design](https://ruszkipista.github.io/ci-notes/notes/ResponsiveWebDesign.html)
 - [GIT Essentials](https://ruszkipista.github.io/ci-notes/notes/GITEssentials.html)
 - [User Centric Frontend Development](https://ruszkipista.github.io/ci-notes/notes/UserCentricFrontendDevelopment.html)
