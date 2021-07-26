@@ -13,3 +13,4 @@
 - [SQL Basics](https://ruszkipista.github.io/ci-notes/notes/SQLbasics.html)
 - [Python Flask-SQLite-MongoDB](https://ruszkipista.github.io/ci-notes/notes/Python-Flask-SQLite-MongoDB.html)
 - [Python Challenges](https://ruszkipista.github.io/ci-notes/notes/Python-challenges.html)
+- [Cloud Native Fundamentals](https://ruszkipista.github.io/ci-notes/notes/CloudNativeFundamentals.html)
